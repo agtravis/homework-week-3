@@ -29,7 +29,7 @@ document.getElementById('passwordForm').addEventListener('submit', function () {
             finalArray = finalArray.concat(upperArray);
         }
         //if none selected, prompt
-        if (finalArray.length == 0) {
+        if (finalArray.length === 0) {
             alert('You have not selected any character groups. You must choose at least one group.')
         } else {
             //run main function (below, rework)
