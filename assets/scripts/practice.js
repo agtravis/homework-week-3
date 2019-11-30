@@ -78,3 +78,17 @@ document.getElementById('copyButton').addEventListener('click', function() {
     passwordToCopy.setSelectionRange(0, 127);
     document.execCommand('copy');
 });
+
+
+//Slider
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+var passLengthField = document.getElementById('userNumChar');
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  passLengthField.value = this.value;
+}
