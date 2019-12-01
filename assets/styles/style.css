@@ -49,3 +49,43 @@ body {
     cursor: pointer;
 }
 
+#header-container {
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 8px solid #ffc107;
+}
+
+#title {
+    color: #ffffff;
+    background-color: #0054a6;
+    flex-grow: 2;
+    padding: 1em;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+#portfolio-link {
+    color: #0054a6;
+    background-color: #ffffff;
+    font-size: 2em;
+    flex-grow: 1;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#portfolio-link:hover {
+    text-decoration: none;
+}
+
