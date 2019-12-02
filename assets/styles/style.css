@@ -177,13 +177,15 @@ body {
 
 .checkbox-row {
     border: 1px solid #0054a6;
+    margin: 0 10px 20px 10px;
 }
 
 #check-box-title {
-    margin-top: 20px;
+    margin: 20px 15px;
 }
 
 #checkboxes {
     display: flex;
     justify-content: space-around;
+    padding: 0 20px;
 }
