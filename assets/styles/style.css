@@ -117,7 +117,48 @@ body {
     padding: 1em;
 }
 
-#img img, #ibm-link img {
+#img,
+#ibm-link {
+    display: flex;
+    align-items: center;
+}
+
+#img img,
+#ibm-link img {
     width: 100px;
+}
+
+@media screen and (max-width: 842px) {
+    #img img, #ibm-link img {
+        width: 55px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #img img,
+    #ibm-link img {
+        display: none;
+    }
+}
+
+#small-image-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+#small-image-row img {
+    width: 100px;
+}
+
+@media screen and (min-width: 576px) {
+    #small-image-row {
+        display: none;
+    }
+}
+
+.center-it {
+    display: flex;
+    justify-content: center;
 }
 
