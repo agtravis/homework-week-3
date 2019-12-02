@@ -176,8 +176,14 @@ body {
 }
 
 .checkbox-row {
-    border: 1px solid #0054a6;
+    border: 3px solid #0054a6;
     margin: 0 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    text-align: center;
 }
 
 #check-box-title {
