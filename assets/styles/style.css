@@ -175,3 +175,15 @@ body {
     justify-content: center;
 }
 
+.checkbox-row {
+    border: 1px solid #0054a6;
+}
+
+#check-box-title {
+    margin-top: 20px;
+}
+
+#checkboxes {
+    display: flex;
+    justify-content: space-around;
+}
