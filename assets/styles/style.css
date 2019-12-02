@@ -195,3 +195,39 @@ body {
     justify-content: space-around;
     padding: 0 20px;
 }
+
+h1#genButton {
+    color: #ffffff;
+    background-color: #0054a6;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#genRefresh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#refreshButton {
+    width: 60px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#genCopy {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#copyButton {
+    width: 41px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
