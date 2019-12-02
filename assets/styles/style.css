@@ -196,6 +196,7 @@ body {
     padding: 0 20px;
 }
 
+
 h1#genButton {
     color: #ffffff;
     background-color: #0054a6;
@@ -230,4 +231,18 @@ h1#genButton {
     width: 41px;
     margin-bottom: 8px;
     cursor: pointer;
+}
+
+#your-password-is {
+    padding: 10px;
+}
+
+#password-row {
+    text-align: center;
+}
+
+#the-password {
+    border: 3px solid #0054a6;
+    padding: 10px;
+    word-wrap: break-word;
 }
