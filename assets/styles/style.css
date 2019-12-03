@@ -117,6 +117,10 @@ body {
     padding: 1em;
 }
 
+#why {
+    border-bottom: 1px solid #0054a6;
+}
+
 #img,
 #ibm-link {
     display: flex;
