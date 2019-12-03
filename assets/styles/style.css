@@ -273,3 +273,61 @@ footer p {
     position: relative;
     top: 18px;
 }
+
+/*Checkbox styling*/
+
+.customCheckbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+.customCheckbox label::before{
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #0054a6;  
+    position: relative;
+    right: -1px; 
+}
+
+.customCheckbox label::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 9px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(-45deg);
+}
+
+.customCheckbox label {
+    position: relative;
+}
+.customCheckbox label::before,
+.customCheckbox label::after {
+    position: absolute;
+}
+/*Outer-box*/
+.customCheckbox label::before {
+    top: 3px;
+    background-color: #0054a6;
+}
+/*Checkmark*/
+.customCheckbox label::after {
+    left: -12px;
+    top: 7px;
+}
+
+/*Hide the checkmark by default*/
+.customCheckbox input[type="checkbox"] + label::after {
+    content: none;
+}
+/*Unhide the checkmark on the checked state*/
+.customCheckbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.customCheckbox input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
