@@ -72,7 +72,7 @@ function passwordGenerator(finalArray, userNum) {
         passwordArray = rearrangeFirstChar(passwordArray);
     }
     //display that string where the user can see it
-    document.getElementById('the-password').innerHTML = passwordArray;
+    document.getElementById('the-password').value = passwordArray;
 };
 
 //helper function to replace first character if (-/.)
@@ -99,7 +99,7 @@ function rearrangeFirstChar(passwordArray) {
 
 document.getElementById('copyButton').addEventListener('click', function () {
     var holdNode = document.createElement("input");
-    holdNode.setAttribute("value", document.getElementById('the-password').innerHTML);
+    holdNode.setAttribute("value", document.getElementById('the-password').value);
     document.body.appendChild(holdNode);
     holdNode.select();
     document.execCommand("copy");

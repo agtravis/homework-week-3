@@ -253,6 +253,7 @@ h1#genButton:hover {
 #the-password {
     border: 3px solid #0054a6;
     padding: 10px;
+    width: 100%;
 }
 
 footer {
