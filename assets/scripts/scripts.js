@@ -1,7 +1,15 @@
-console.log('connected');
+
+
 
 //on start
 document.getElementById('genButton').addEventListener('click', function () {
+    start();
+});
+document.getElementById('refreshButton').addEventListener('click', function () {
+    start();
+});
+
+function start() {
     //arrays exist for each character type
     var specialArray = ['!', '(', ')', '-', '.', '?', '[', ']', '_', '`', '~', ';', ':', '@', '#', '$', '%', '^', '&', '*', '+', '='];
     var numericalArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -41,7 +49,7 @@ document.getElementById('genButton').addEventListener('click', function () {
         passwordGenerator(finalArray, userNum);
     }
 
-});
+};
 
 function passwordGenerator(finalArray, userNum) {
     var passwordArray = [];
