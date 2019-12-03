@@ -19,15 +19,15 @@ function start() {
     var finalArray = [];
     //check user input 8 - 128
     var userNum = document.getElementById('demo').innerHTML;
-    if (userNum > 20 && userNum < 44) {
-        document.getElementById('the-password').style.fontSize = '1em';
-    }
-    if (userNum > 45 && userNum < 89) {
-        document.getElementById('the-password').style.fontSize = '0.5em';
-    }
-    if (userNum > 90) {
-        document.getElementById('the-password').style.fontSize = '0.3em';
-    }
+    // if (userNum > 20 && userNum < 44) {
+    //     document.getElementById('the-password').style.fontSize = '1em';
+    // }
+    // if (userNum > 45 && userNum < 89) {
+    //     document.getElementById('the-password').style.fontSize = '0.5em';
+    // }
+    // if (userNum > 90) {
+    //     document.getElementById('the-password').style.fontSize = '0.3em';
+    // }
     //read which character types are selected and concatenate
     if (document.getElementById('specialChar').checked) {
         finalArray = finalArray.concat(specialArray);

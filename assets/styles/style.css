@@ -106,6 +106,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 #outer-row {
     display: flex;
     justify-content: center;
@@ -245,10 +246,13 @@ h1#genButton:hover {
     text-align: center;
 }
 
+#password-col {
+    word-wrap: break-word;
+}
+
 #the-password {
     border: 3px solid #0054a6;
     padding: 10px;
-    word-wrap: break-word;
 }
 
 footer {
