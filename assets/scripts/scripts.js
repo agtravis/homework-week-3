@@ -1,7 +1,3 @@
-
-
-
-//on start
 document.getElementById('genButton').addEventListener('click', function () {
     start();
 });

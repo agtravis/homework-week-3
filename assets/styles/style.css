@@ -3,52 +3,6 @@ body {
     width: 100%;
 }
 
-.slidecontainer {
-    width: 100%;
-    /* Width of the outside container */
-}
-
-/* The slider itself */
-
-.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 15px;
-    border-radius: 5px;
-    background: #fcdf8a;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-/* Mouse-over effects */
-
-.slider:hover {
-    opacity: 1;
-    /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #0054a6;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #0054a6;
-    cursor: pointer;
-}
-
 #header-container {
     display: flex;
     justify-content: center;
@@ -194,6 +148,44 @@ body {
     padding: 0 20px;
 }
 
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #fcdf8a;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #0054a6;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #0054a6;
+    cursor: pointer;
+}
+
 h2#genButton {
     color: #ffffff;
     background-color: #0054a6;
@@ -273,8 +265,6 @@ footer p {
     top: 18px;
 }
 
-/*Checkbox styling*/
-
 .customCheckbox input[type="checkbox"] {
     opacity: 0;
 }
@@ -307,33 +297,23 @@ footer p {
     position: absolute;
 }
 
-/*Outer-box*/
-
 .customCheckbox label::before {
     top: 3px;
     background-color: #0054a6;
 }
-
-/*Checkmark*/
 
 .customCheckbox label::after {
     left: -12px;
     top: 7px;
 }
 
-/*Hide the checkmark by default*/
-
 .customCheckbox input[type="checkbox"]+label::after {
     content: none;
 }
 
-/*Unhide the checkmark on the checked state*/
-
 .customCheckbox input[type="checkbox"]:checked+label::after {
     content: "";
 }
-
-/*Adding focus styles on the outer-box of the fake checkbox*/
 
 .customCheckbox input[type="checkbox"]:focus+label::before {
     outline: rgb(59, 153, 252) auto 5px;
