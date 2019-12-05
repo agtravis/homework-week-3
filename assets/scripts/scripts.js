@@ -14,7 +14,7 @@ function start() {
     //This is an empty array to combine the chosen arrays
     var finalArray = [];
     //check user input 8 - 128
-    var userNum = document.getElementById('demo').innerHTML;
+    var userNum = document.getElementById('slide-length').innerHTML;
     // if (userNum > 20 && userNum < 44) {
     //     document.getElementById('the-password').style.fontSize = '1em';
     // }
@@ -108,7 +108,7 @@ document.getElementById('copyButton').addEventListener('click', function () {
 //Slider
 
 var slider = document.getElementById('myRange');
-var output = document.getElementById('demo');
+var output = document.getElementById('slide-length');
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
