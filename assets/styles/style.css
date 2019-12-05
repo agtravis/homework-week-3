@@ -67,7 +67,14 @@ body {
 
 #password-generator {
     border: 8px solid #0054a6;
+    border-radius: 20px;
     padding: 1em;
+}
+
+@media screen and (max-width: 575px) {
+    #password-generator {
+        border-radius: 0px;
+    }
 }
 
 #why {
@@ -128,7 +135,8 @@ body {
 }
 
 .checkbox-row {
-    border: 3px solid #0054a6;
+    border: 3px solid #ffc107;
+    border-radius: 20px;
     margin: 0 10px 20px 10px;
     display: flex;
     flex-direction: column;
