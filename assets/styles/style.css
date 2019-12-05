@@ -79,11 +79,13 @@ body {
 
 #why {
     border-bottom: 1px solid #0054a6;
+    text-align: justify;
 }
 
 #img, #ibm-link {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #img img, #ibm-link img {
