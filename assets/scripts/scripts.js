@@ -52,9 +52,9 @@ function passwordGenerator(finalArray, userNum) {
     //start a for loop to iterate to the number stored variable
     for (i = 0; i < userNum; i++) {
         //for each iteration, generate a random number between 1 and how many characters there are
-        var bigDecimal = Math.random();
-        var improvedNum = (bigDecimal * finalArray.length);
-        var randomNum = Math.floor(improvedNum);
+        // var randomDecimal = Math.random();
+        // var randomMultiplied = (Math.random() * finalArray.length);
+        var randomNum = Math.floor(Math.random() * finalArray.length);
         //use that random number as a way to pull the character from the array
         var randomChar = finalArray[randomNum];
         //push that character to the empty array
@@ -82,8 +82,9 @@ function rearrangeFirstChar(passwordArray) {
 }
 
 // document.getElementById('copyButton').addEventListener('click', function() {
-//     var passwordToCopy = document.getElementById('the-password')[0];
+//     var passwordToCopy = document.getElementById('the-password');
 //     passwordToCopy.select();
+//     passwordToCopy.setSelectionRange(0, 128);
 //     document.execCommand('copy');
 // });
 
@@ -94,19 +95,20 @@ function rearrangeFirstChar(passwordArray) {
 // } else {
 
 document.getElementById('copyButton').addEventListener('click', function () {
-    var holdNode = document.createElement("input");
-    holdNode.setAttribute("value", document.getElementById('the-password').value);
-    document.body.appendChild(holdNode);
-    holdNode.select();
-    document.execCommand("copy");
-    document.body.removeChild(holdNode);
+    var tempNode = document.createElement('input');
+    tempNode.setAttribute('value', document.getElementById('the-password').value);
+    document.body.appendChild(tempNode);
+    tempNode.select();
+    tempNode.setSelectionRange(0, 128);
+    document.execCommand('copy');
+    document.body.removeChild(tempNode);
 });
 
 
 //Slider
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var slider = document.getElementById('myRange');
+var output = document.getElementById('demo');
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
