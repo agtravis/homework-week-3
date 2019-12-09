@@ -4,7 +4,7 @@
 
 Before commencing work at all on this project, I decided to use the internet to research what other developers and established companies had in operation. I used Google, and found a few that I particularly liked either the features they had used, or the style of their generators. I bookmarked them for easy reference:
 
-![Bookmarks](https://github.com/agtravis/homework-week-1/blob/master/assets/images/bookmarks.PNG)
+![Bookmarks](https://github.com/agtravis/homework-week-3/blob/master/assets/images/bookmarks.PNG)
 
 Next, I did some research on password conventions. In the brief we are told to include special characters, however I wasn't sure if ALL special characters would be allowed, at least not all that are present on a standard English keyboard. When I used Googled *'password valid characters'*, the first link that came up was IBM's guidelines. IBM lists the characters they allow in their passwords, and they also have some further restrictions on allowable first characters. I decided I would incorporate this feature as well in my generator.
 
@@ -16,7 +16,7 @@ Now I knew what I wanted to achieve, I decided to at least get the JavaScript co
 
 This is how my basic HTML webpage looks:
 
-![PracticeHTML](https://github.com/agtravis/homework-week-1/blob/master/assets/images/practiceHTML.PNG)
+![PracticeHTML](https://github.com/agtravis/homework-week-3/blob/master/assets/images/practiceHTML.PNG)
 
 I set one checkbox to be default checked, and the input field to have a value, for debugging purposes.
 
@@ -169,7 +169,7 @@ What this does is it listens for a click on the button I have designated *copy*,
 
 I did not like how this operated - it looked scruffy:
 
-![uglypassword](https://github.com/agtravis/homework-week-1/blob/master/assets/images/uglypassword.PNG)
+![uglypassword](https://github.com/agtravis/homework-week-3/blob/master/assets/images/uglypassword.PNG)
 
 The highlighting of the password is bearable, but the selection lines that outline the ```input``` are unsightly.
 
@@ -187,7 +187,7 @@ I found another method that uses the DOM:
 
 This time the function basically creates a new node, sets the node's value to the password, appends the node to the body of the webpage, THEN it copies the code tot he clipboard with the same code as above, then it deletes the node. If the user could see as fast as the computer can process, or if they were using the developer tools for some obscure reason (perhaps reading my code!), then they would be able to see it, but seeing as this probably happens faster than the computer screen refresh rate, it's going to be missed by human eyes. The benefit of this method is that nothing visible is ever highlighted by the cursor, thus:
 
-![prettypassword](https://github.com/agtravis/homework-week-1/blob/master/assets/images/prettypassword.PNG)
+![prettypassword](https://github.com/agtravis/homework-week-3/blob/master/assets/images/prettypassword.PNG)
 
 The only downside to this is that it would be nice to have some form of notification that the user had been successful in copying to the clipboard. I could write an alert, but I don't like the standard alerts - a little mouse hover box displaying a message (like a ```title``` attribute of an image) would be nice, but I didn't research or implement that here. The user will know if it worked by attempting to paste anywhere, like the URL bar for example. I stopped short of providing them a field to test it in.
 
