@@ -204,3 +204,15 @@ Specifically:
 1. My custom check boxes - I understand how to affect the change I want to my CSS code, and I did edit color and position of many elements, but could I write this code from scratch? Absolutely not. However I understand it enough in the context of my code, and it functions perfectly. Should I need to use it again, I could come back and take it from here and edit it as needed.
 
 ## Future Endeavors
+
+I have already mentioned a few things that I would implement in future:
+1. A slider control that displays the length directly on it
+1. An 'on release' of the slider generate of a password
+1. Advanced code to remove the repetition of the conditional statements concatenating the arrays
+1. Advanced code removing ALL possibility of a password containing exclusively invalid characters
+
+In addition to this I could also bring in a color bar that would go from red through orange to shades of green and/or increase in length to display how strong the users password might be. I decided against this, mainly because of time constraints and necessity, but also because most sites that require passwords usually are equipped with this feature themselves.
+
+Also, if this was for a professional brief, I would spent more time on the CSS and design aspect. The project brief does not require this level of attention to design, so I spent most of my time on the JavaScript.
+
+A key design aspect I could not implement in the time-frame was involving my custom check boxes - I would like the whole ```<div>``` containing the check box to be able to be clicked on. As it stands, exclusively the check box itself must be clicked on.
