@@ -5,24 +5,44 @@ document.getElementById('refreshButton').addEventListener('click', function () {
     start();
 });
 
+
+var specialArray = ['!', '(', ')', '-', '.', '?', '[', ']', '_', '`', '~', ';', ':', '@', '#', '$', '%', '^', '&', '*', '+', '='];
+var numericalArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var lowerArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var upperArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+
+var includesSpecialChar = false;
+var includesNumericalChar = false;
+var includesLowerChar = false;
+var includesUpperChar = false;
+
 function start() {
-    var specialArray = ['!', '(', ')', '-', '.', '?', '[', ']', '_', '`', '~', ';', ':', '@', '#', '$', '%', '^', '&', '*', '+', '='];
-    var numericalArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var lowerArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    var upperArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     var finalArray = [];
     var userNum = document.getElementById('slide-length').innerHTML;
     if (document.getElementById('specialChar').checked) {
+        includesSpecialChar = true;
         finalArray = finalArray.concat(specialArray);
+    } else {
+        includesSpecialChar = false;
     }
     if (document.getElementById('numericalChar').checked) {
+        includesNumericalChar = true;
         finalArray = finalArray.concat(numericalArray);
+    } else {
+        includesNumericalChar = false;
     }
     if (document.getElementById('lowerChar').checked) {
+        includesLowerChar = true;
         finalArray = finalArray.concat(lowerArray);
+    } else {
+        includesLowerChar = false;
     }
     if (document.getElementById('upperChar').checked) {
+        includesUpperChar = true;
         finalArray = finalArray.concat(upperArray);
+    } else {
+        includesUpperChar = false;
     }
     if (finalArray.length === 0) {
         alert('You have not selected any character groups. You must choose at least one group.')
@@ -38,12 +58,38 @@ function passwordGenerator(finalArray, userNum) {
         var randomChar = finalArray[randomNum];
         passwordArray.push(randomChar);
     }
+    if (includesSpecialChar) {
+        containsAllChoices(passwordArray, specialArray);
+    }
+    if (includesNumericalChar) {
+        containsAllChoices(passwordArray, numericalArray);
+    }
+    if (includesLowerChar) {
+        containsAllChoices(passwordArray, lowerArray);
+    }
+    if (includesUpperChar) {
+        containsAllChoices(passwordArray, upperArray);
+    }
     passwordArray = passwordArray.join('');
     if (passwordArray.charAt(0) === '-' || passwordArray.charAt(0) === '.') {
         passwordArray = rearrangeFirstChar(passwordArray);
     }
     document.getElementById('the-password').value = passwordArray;
 };
+
+function containsAllChoices(passwordArray, characterArray) {
+    var count = 0;
+    characterArray.forEach(function(character) {
+        if (passwordArray.includes(character)) {
+            count++;
+        }
+    });
+    if (count === 0) {
+        var randomNum = Math.floor(Math.random() * characterArray.length);
+        passwordArray.shift();
+        passwordArray.push(characterArray[randomNum]);
+    }
+}
 
 function rearrangeFirstChar(passwordArray) {
     passwordArray = passwordArray.slice(1) + passwordArray.slice(0, 1);
